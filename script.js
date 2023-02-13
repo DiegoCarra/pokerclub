@@ -612,44 +612,44 @@ function increment () {
             leaderboard.className = 'leaderboard_hidden';
             join_text.className = 'join_hidden';
             discord_qr.className = 'join_hidden';
-            
         }
-    } else {
-        if (window.scrollY > 240 & window.scrollY < window.innerHeight) {
-            for(let bankroll = 23; bankroll >= 0; bankroll --) {
-                if (bankrolls[bankroll].innerHTML < parseInt(data[bankroll + 1][2])) {
-                    bankrolls[bankroll].innerHTML = bankroll_values[bankroll]
-                    if (parseInt(data[bankroll + 1][2]) - bankrolls[bankroll].innerHTML > 100) {
-                        bankroll_values[bankroll] += Math.round((data[bankroll + 1][2] - bankroll_values[bankroll]) / ((24 - bankroll) * 1.5))
-                        names[bankroll].innerHTML = makeid(data[bankroll + 1][1].length);
-                    } else {
-                        bankroll_values[bankroll] += 1
-                        names[bankroll].innerHTML = makeid(data[bankroll + 1][1].length);
-                    }
-                } else {
-                    names[bankroll].innerHTML = data[bankroll+ 1][1];
-                }
+    } 
+    // else {
+    //     if (window.scrollY > 240 & window.scrollY < window.innerHeight) {
+    //         for(let bankroll = 23; bankroll >= 0; bankroll --) {
+    //             if (bankrolls[bankroll].innerHTML < parseInt(data[bankroll + 1][2])) {
+    //                 bankrolls[bankroll].innerHTML = bankroll_values[bankroll]
+    //                 if (parseInt(data[bankroll + 1][2]) - bankrolls[bankroll].innerHTML > 100) {
+    //                     bankroll_values[bankroll] += Math.round((data[bankroll + 1][2] - bankroll_values[bankroll]) / ((24 - bankroll) * 1.5))
+    //                     names[bankroll].innerHTML = makeid(data[bankroll + 1][1].length);
+    //                 } else {
+    //                     bankroll_values[bankroll] += 1
+    //                     names[bankroll].innerHTML = makeid(data[bankroll + 1][1].length);
+    //                 }
+    //             } else {
+    //                 names[bankroll].innerHTML = data[bankroll+ 1][1];
+    //             }
                 
-            }
-            leaderboard.className = 'leaderboard_show';
+    //         }
+    //         leaderboard.className = 'leaderboard_show';
             
         
-        } else {
-            bankroll_values = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-            for(let bankroll = 23; bankroll >= 0; bankroll --) {
-                bankrolls[bankroll].innerHTML = "0"
-                names[bankroll].innerHTML = makeid(data[bankroll + 1][1].length);
-            }
-            leaderboard.className = 'leaderboard_hidden';
-        }
-        if (window.scrollY > window.innerHeight * 0.8) {
-            join_text.className = 'join_show';
-            discord_qr.className = 'join_show';
-        } else {
-            join_text.className = 'join_hidden';
-            discord_qr.className = 'join_hidden';
-        }
-    }
+    //     } else {
+    //         bankroll_values = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    //         for(let bankroll = 23; bankroll >= 0; bankroll --) {
+    //             bankrolls[bankroll].innerHTML = "0"
+    //             names[bankroll].innerHTML = makeid(data[bankroll + 1][1].length);
+    //         }
+    //         leaderboard.className = 'leaderboard_hidden';
+    //     }
+    //     if (window.scrollY > window.innerHeight * 0.8) {
+    //         join_text.className = 'join_show';
+    //         discord_qr.className = 'join_show';
+    //     } else {
+    //         join_text.className = 'join_hidden';
+    //         discord_qr.className = 'join_hidden';
+    //     }
+    // }
 }
 
 
