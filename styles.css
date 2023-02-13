@@ -1,0 +1,324 @@
+
+html{
+    background: rgb(35, 35, 35);
+    
+}
+
+body {
+    height: 200vh;
+    margin:0;
+    overscroll-behavior-y: none;
+    overscroll-behavior-x: none;
+}
+
+@font-face {
+    font-family: gentonabbitalic;
+    src: url(gentona_bold_bold_italic.woff);
+  }
+
+  @font-face {
+    font-family: gentonamedium;
+    src: url(gentona_medium.woff);
+  }
+
+  @font-face {
+    font-family: gentonalight;
+    src: url(gentona_light.woff);
+  }
+
+.front_page {
+    background-size: cover;
+    background-image: linear-gradient(0deg,rgb(0,0,0), rgba(240, 248, 255, 0), rgba(240, 248, 255, 0), rgba(0,33,165,.8)),url("playingpoker.png");
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: ease-in-out 200ms;
+}
+
+.front_page_text {
+    background-size: cover;
+    background-image: linear-gradient(0deg,rgb(0,0,0), rgba(240, 248, 255, 0), rgba(240, 248, 255, 0), rgba(0,33,165,.8)),url("playingpoker.png");
+    height: 100vh;
+    width: 100vw;
+    margin-top: 0.01vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: ease-in-out 200ms;
+}
+
+.more_text_show {
+    font-family: Helvetica, sans-serif;
+    margin: 5%;
+    margin-top: 0%;
+    margin-left: 10%;
+    font-size: 200%;
+    color: white;
+    transition-property: height;
+    transition: ease-in-out 200ms;
+}
+
+.more_text_hidden {
+    font-family: Helvetica, sans-serif;
+    margin: 2.5%;
+    margin-bottom: 0%;;
+    margin-left: 10%;
+    font-size: 200%;
+    color: rgba(255, 255, 255, 0);
+    transition-property: margin-bottom;
+    transition: ease-in-out 200ms;
+}
+
+nav {
+    display: flex;
+    padding: 1%;
+    padding-top: 2%;
+    height: 10vh;
+    /*
+    background: rgb(0,33,165)!important;
+    background: linear-gradient(-180deg,rgba(0,33,165,1) 0%,rgba(1,24,119,1) 100%,rgba(0,212,255,1) 100%)!important;
+    */
+
+}
+
+a {
+    text-decoration: none;
+}
+.left_navbar {
+    flex-grow: 1;
+    display: flex;
+    margin-left: 1%;
+}
+.right_navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: right;
+}
+
+h1 {
+    font-size: clamp(2rem, 10vw, 4rem);
+    color: white;
+}
+
+img {
+    margin-left: 0%;
+    filter: drop-shadow(0 5px 0.75rem rgba(0, 0, 0, 0.693));
+}
+
+
+#PokerClubLogo {
+    margin-left: 2vw;
+    width: 10.5vh;
+}
+
+#UFLogo {
+    width: 50%;
+}
+
+
+.about_link {
+    font-family: "gentonalight";
+    margin-right: clamp(0rem, 2.5vw, 4rem);
+    margin-top: -10%;
+}
+
+.bottom_front_page {
+    align-items: center;
+}
+
+.learn_more {
+    font-family: "gentonabbitalic";
+    vertical-align: bottom;
+    margin-left: 10vw;
+    font-size: 10vh;
+}
+
+.chevron {
+    font-family: "gentonabbitalic";
+    margin-top: -10vh;
+    margin-left: 15vw;
+    font-size: 10vh;
+}
+
+
+
+
+
+main {
+    height: 100vh;
+    background: radial-gradient( rgb(71, 71, 71), rgb(35, 35, 35));
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.leaderboard_hidden {
+    margin: 5vh;
+    margin-left: -10vw;
+    font-family: "gentonamedium";
+    flex-grow: 1;
+    text-align: center;
+    opacity: 0;
+    margin-right: 20vw;
+    width: 0;
+    transition: ease-in-out 600ms;
+}
+
+.leaderboard_show {
+    margin: 5vh;
+    margin-left: 10vw;
+    font-family: "gentonamedium";
+    flex-grow: 1;
+    text-align: center;
+    width: 30vw;
+    transition: ease-in-out 600ms;
+}
+
+.join {
+    width: 40vw;
+    margin: 0vh;
+    padding: 5vw;
+    font-family: "gentonamedium";
+    /*font-size: 5vw;*/
+    flex-grow: 1;
+}
+
+.leaderboard_box {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background: radial-gradient( rgb(255, 255, 255), rgb(146, 145, 145));
+    height: 60vh;
+    width: 100%;
+    border-radius: 0.5rem;
+    display: flex;
+}
+
+.leaderboard_box_left {
+    flex-basis: 25%;
+    display:flex;
+    flex-direction: column;
+}
+
+.leaderboard_box_middle {
+    flex-basis: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+.leaderboard_box_right {
+    flex-basis: 50%;
+    display:flex;
+    flex-direction: column;
+}
+
+.leaderboard_orange {
+    background-color: #fa4417ce;
+    border-color: black;
+    border-style: solid;
+    border-top: 0;
+    flex-grow: 1;
+}
+
+.leaderboard_blue {
+    background-color: #021a7cdf;
+    border-color: black;
+    border-style: solid;
+    border-top: 0;
+    flex-grow: 1;
+}
+
+#leaderboard_top_left {
+    border-top-left-radius: 0.5rem;
+}
+
+#leaderboard_top_right {
+    border-top-right-radius: 0.5rem;
+}
+
+#leaderboard_bottom_left {
+    border-bottom-left-radius: 0.5rem;
+}
+
+#leaderboard_bottom_right {
+    border-bottom-right-radius: 0.5rem;
+}
+
+p1 {
+    color:white;
+}
+
+#discord_qr {
+    margin-top: -5vh;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.join_hidden {
+    opacity: 0;
+    margin-left: 15vw;
+    transition: ease-in-out 600ms;
+}
+
+.join_show {
+    color: white;
+    transition: ease-in-out 600ms;
+}
+
+#join_text {
+    overflow: clip;
+    height: 18vh;
+}
+
+
+@media (max-width: 800px) {
+    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+    main {
+        height: 150vh;
+        background: radial-gradient( rgb(71, 71, 71), rgb(35, 35, 35));
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .leaderboard_hidden {
+        margin: 5vh;
+        margin-left: -10vw;
+        opacity: 0;
+        margin-right: 20vw;
+        width: 0;
+        transition: ease-in-out 600ms;
+    }
+
+    
+    .leaderboard_show {
+        margin: 5vh;
+        margin-left: 10vw;
+        width: 80vw;
+        transition: ease-in-out 600ms;
+    }
+    .join_hidden {
+        width: 100vw;
+        opacity: 0;
+        margin-left: 20vw;
+        transition: ease-in-out 600ms;
+    }
+    
+    .join {
+        width: 100%;
+        margin-top: -20vh;
+    }
+    .join_show {
+        width: 100vw;
+        color: white;
+        transition: ease-in-out 600ms;
+        
+    }
+    
+    #join_text {
+        overflow: clip;
+        height: 18vh;
+    }
+    body {
+        height: 250vh;
+    }
+
+  }
