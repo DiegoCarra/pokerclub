@@ -285,7 +285,7 @@ p1 {
         opacity: 0;
         margin-right: 20vw;
         width: 0;
-        transition: ease-in-out 600ms;
+        transition: ease-in-out 400ms;
     }
 
     
@@ -293,13 +293,13 @@ p1 {
         margin: 5vh;
         margin-left: 10vw;
         width: 80vw;
-        transition: ease-in-out 600ms;
+        transition: ease-in-out 400ms;
     }
     .join_hidden {
         width: 100vw;
         opacity: 0;
         margin-left: 20vw;
-        transition: ease-in-out 600ms;
+        transition: ease-in-out 400ms;
     }
     
     .join {
@@ -309,7 +309,7 @@ p1 {
     .join_show {
         width: 100vw;
         color: white;
-        transition: ease-in-out 600ms;
+        transition: ease-in-out 400ms;
         
     }
     
