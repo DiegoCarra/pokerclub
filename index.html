@@ -14,7 +14,20 @@
         <nav>
             <div class="left_navbar">
                 <img src="UFlogo.png" alt="UFLogo" id="UFLogo">
-                <img src="PokerClublogo.png" alt="PokerClubLogo" id="PokerClubLogo">
+                <style>
+                    @keyframes spin3D {
+                      from { transform: rotateY(0deg) }
+                      to { transform: rotateY(360deg) }
+                    }
+                    .Clublogo {
+                      animation-name: spin3D;
+                      animation-duration: 3s;
+                      animation-iteration-count: infinite;
+                      /* linear | ease | ease-in | ease-out | ease-in-out */
+                      animation-timing-function: linear;
+                    }
+                  </style>
+                <img src="PokerClublogo.png" class="Clublogo" alt="PokerClubLogo" id="PokerClubLogo">
             </div>
             <div class="right_navbar">
                 <a class="about_link" href="about.html">
