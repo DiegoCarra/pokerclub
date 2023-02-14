@@ -327,4 +327,23 @@ p1 {
         max-width: 100%;
         max-height: 100%;
     }
+    nav {
+        display: flex;
+        padding: 1%;
+        padding-top: 2%;
+        height: 10vh;
+        flex-direction: column;
+        /*
+        background: rgb(0,33,165)!important;
+        background: linear-gradient(-180deg,rgba(0,33,165,1) 0%,rgba(1,24,119,1) 100%,rgba(0,212,255,1) 100%)!important;
+        */
+    
+    }
+
+    .right_navbar {
+        margin: 1rem;
+    }
+    #UFLogo {
+        width: 70%;
+    }
   }
