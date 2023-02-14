@@ -305,20 +305,26 @@ p1 {
     .join {
         width: 90vw;
         margin-top: -20vh;
+        
     }
     .join_show {
         width: 90vw;
         color: white;
         transition: ease-in-out 400ms;
-        
     }
     
     #join_text {
         overflow: clip;
         height: 18vh;
+        text-align: center;
     }
     body {
         height: 250vh;
     }
 
+    #discord_qr {
+        margin-top: -5vh;
+        max-width: 100%;
+        max-height: 100%;
+    }
   }
