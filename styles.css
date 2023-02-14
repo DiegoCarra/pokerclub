@@ -353,4 +353,13 @@ p1 {
         background-position-y: 0%;
         
     }
+    .chevron{
+        margin-bottom: 0;
+    }
+    .more_text_hidden {
+        margin-bottom: -5vh;
+    }
+    .more_text_show {
+        margin-bottom: 10vh;
+    }
   }
