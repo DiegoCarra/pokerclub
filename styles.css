@@ -1,4 +1,7 @@
 
+* {
+    outline-style: solid;
+}
 html{
     background: rgb(35, 35, 35);
     
@@ -288,7 +291,7 @@ p1 {
         transition: ease-in-out 400ms;
     }
 
-    
+
     .leaderboard_show {
         margin: 5vh;
         margin-left: 10vw;
@@ -296,18 +299,18 @@ p1 {
         transition: ease-in-out 400ms;
     }
     .join_hidden {
-        width: 100vw;
+        width: 75vw;
         opacity: 0;
         margin-left: 20vw;
         transition: ease-in-out 400ms;
     }
     
     .join {
-        width: 100%;
+        width: 90vw;
         margin-top: -20vh;
     }
     .join_show {
-        width: 100vw;
+        width: 90vw;
         color: white;
         transition: ease-in-out 400ms;
         

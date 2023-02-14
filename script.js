@@ -583,7 +583,7 @@ let bankroll_values = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 function increment () {
     if (true) {
-        if (window.scrollY > 240 & window.scrollY < window.innerHeight * 1.5) {
+        if (window.scrollY > 240 & window.scrollY < window.innerHeight * 2) {
             for(let bankroll = 23; bankroll >= 0; bankroll --) {
                 if (bankrolls[bankroll].innerHTML < parseInt(data[bankroll + 1][2])) {
                     bankrolls[bankroll].innerHTML = bankroll_values[bankroll]
