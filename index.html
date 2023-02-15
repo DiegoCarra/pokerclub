@@ -7,9 +7,41 @@
     <title>UF Poker Club</title>
     <link rel="stylesheet" href="styles.css" />
     
+    <!-- API STUFF -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>easyData - open source & free solutions</title>
+    <!-- Icon -->
+    <link
+      rel="icon"
+      href="https://easy-data.mdbgo.io/img/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
 </head>
 
 <body id="body">
+    <div class="container" >
+        <!-- Table -->
+        <table class="table">
+          <thead id="table-head" ></thead>
+          <tbody id="table-body" ></tbody>
+        </table>
+        <!-- Table -->
+      </div>
     <div class="front_page" id="front_page">
         <nav>
             <div class="left_navbar">
@@ -46,9 +78,9 @@
         <div class="leaderboard_hidden" id="leaderboard">
             <h1>Leaderboard</h1>
             <div class="leaderboard_box">
-                <div class="leaderboard_box_left">
+                <div class="leaderboard_box_left" id = "leaderboard_box_left">
                     <p1 class="leaderboard_blue" id="leaderboard_top_left">Rank</p1>
-                    <p1 class="leaderboard_orange">1</p1>
+                    <!-- <p1 class="leaderboard_orange">1</p1>
                     <p1 class="leaderboard_blue">2</p1>
                     <p1 class="leaderboard_orange">3</p1>
                     <p1 class="leaderboard_blue">4</p1>
@@ -71,11 +103,11 @@
                     <p1 class="leaderboard_orange">21</p1>
                     <p1 class="leaderboard_blue">22</p1>
                     <p1 class="leaderboard_orange">23</p1>
-                    <p1 class="leaderboard_blue" id="leaderboard_bottom_left">24</p1>
+                    <p1 class="leaderboard_blue" id="leaderboard_bottom_left">24</p1> -->
                 </div>
-                <div class="leaderboard_box_middle">
+                <div class="leaderboard_box_middle" id="leaderboard_box_middle">
                     <p1 class="leaderboard_blue">Name</p1>
-                    <p1 class="leaderboard_orange" id="N1">1</p1>
+                    <!-- <p1 class="leaderboard_orange" id="N1">1</p1>
                     <p1 class="leaderboard_blue" id="N2">2</p1>
                     <p1 class="leaderboard_orange" id="N3">3</p1>
                     <p1 class="leaderboard_blue" id="N4">4</p1>
@@ -98,12 +130,12 @@
                     <p1 class="leaderboard_orange" id="N21">21</p1>
                     <p1 class="leaderboard_blue" id="N22">22</p1>
                     <p1 class="leaderboard_orange" id="N23">23</p1>
-                    <p1 class="leaderboard_blue" id="N24">24</p1>
+                    <p1 class="leaderboard_blue" id="N24">24</p1> -->
                 </div>
                     
-                <div class="leaderboard_box_right">
+                <div class="leaderboard_box_right" id = "leaderboard_box_right">
                     <p1 class="leaderboard_blue" id="leaderboard_top_right">Bankroll</p1>
-                    <p1 class="leaderboard_orange" id="B1">0</p1>
+                    <!--<p1 class="leaderboard_orange" id="B1">0</p1>
                     <p1 class="leaderboard_blue" id="B2">0</p1>
                     <p1 class="leaderboard_orange" id="B3">0</p1>
                     <p1 class="leaderboard_blue" id="B4">0</p1>
@@ -126,7 +158,7 @@
                     <p1 class="leaderboard_orange" id="B21">0</p1>
                     <p1 class="leaderboard_blue" id="B22">0</p1>
                     <p1 class="leaderboard_orange" id="B23">0</p1>
-                    <p1 class="leaderboard_blue" id="leaderboard_bottom_right">0</p1>
+                    <p1 class="leaderboard_blue" id="leaderboard_bottom_right">0</p1> -->
                 </div>
             </div>
         </div>
@@ -139,6 +171,57 @@
         </div>
     </main>
     <div class="lower"></div>
+    <!-- MDB ESSENTIAL -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Google API -->
+  <script src="https://apis.google.com/js/api.js"></script>
+  <!-- easyData -->
+  <script type="text/javascript" src="js/easyData-google-sheets.js"></script>
+
+  <!-- easyData - Creating table -->
+  <script>
+    {
+      {
+        // Your API KEY
+        const API_KEY = "AIzaSyAqx4MOPRlmPZWuHPYlUh-tNYuyOmBlRa8";
+
+        function displayResult2(response) {
+          let tableHead = "";
+          let tableBody = "";
+
+          response.result.values.forEach((row, index) => {
+            if (index === 0) {
+              tableHead += "<tr>";
+              row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+              tableHead += "</tr>";
+            } else {
+              tableBody += "<tr>";
+              row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+              tableBody += "</tr>";
+            }
+          });
+
+          document.getElementById("table-head").innerHTML = tableHead;
+          document.getElementById("table-body").innerHTML = tableBody;
+        }
+
+        function loadData() {
+          // Spreadsheet ID
+          const spreadsheetId = "1crW2OmEcxcF_0DbZ63a7X8AELICxLPyqF3csOyRYiUc";
+          const range = "A:Z";
+          getPublicValues({ spreadsheetId, range }, displayResult2);
+        }
+
+        window.addEventListener("load", (e) => {
+          initOAuthClient({ apiKey: API_KEY });
+        });
+
+        document.addEventListener("gapi-loaded", (e) => {
+          loadData();
+        });
+      }
+    }
+  </script>
     <script src="script.js" alt="Discord QR code"></script>
 
 </body>

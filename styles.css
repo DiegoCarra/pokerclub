@@ -1,3 +1,9 @@
+.container{
+    opacity: 0;
+    height: 0;
+    width: 0;
+    font-size: 0;
+}
 
 html{
     background: rgb(35, 35, 35);
@@ -9,6 +15,7 @@ body {
     margin:0;
     overscroll-behavior-y: none;
     overscroll-behavior-x: none;
+    overflow: scroll;
 }
 
 @font-face {
@@ -189,8 +196,10 @@ main {
     background: radial-gradient( rgb(255, 255, 255), rgb(146, 145, 145));
     height: 60vh;
     width: 100%;
-    border-radius: 0.5rem;
     display: flex;
+    border-color: black;
+    border-style: solid;
+    border-top-width: 3px;
 }
 
 .leaderboard_box_left {
@@ -227,24 +236,9 @@ main {
     flex-grow: 1;
 }
 
-#leaderboard_top_left {
-    border-top-left-radius: 0.5rem;
-}
-
-#leaderboard_top_right {
-    border-top-right-radius: 0.5rem;
-}
-
-#leaderboard_bottom_left {
-    border-bottom-left-radius: 0.5rem;
-}
-
-#leaderboard_bottom_right {
-    border-bottom-right-radius: 0.5rem;
-}
-
 p1 {
     color:white;
+    font-size: small;
 }
 
 #discord_qr {
@@ -363,3 +357,4 @@ p1 {
         margin-bottom: 10vh;
     }
   }
+
