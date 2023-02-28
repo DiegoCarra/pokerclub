@@ -12,6 +12,7 @@ html{
 
 body {
     height: 200vh;
+    height: 200dvh;
     margin:0;
     overscroll-behavior-y: none;
     overscroll-behavior-x: none;
@@ -37,6 +38,7 @@ body {
     background-size: cover;
     background-image: linear-gradient(0deg,rgb(0,0,0), rgba(240, 248, 255, 0), rgba(240, 248, 255, 0), rgba(0,33,165,.8)),url("PokerClubImage.png");
     height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -47,6 +49,7 @@ body {
     background-size: cover;
     background-image: linear-gradient(0deg,rgb(0,0,0), rgba(240, 248, 255, 0), rgba(240, 248, 255, 0), rgba(0,33,165,.8)),url("PokerClubImage.png");
     height: 100vh;
+    height: 100dvh;
     margin-top: 0.01vh;
     display: flex;
     flex-direction: column;
@@ -262,7 +265,7 @@ p1 {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     /* CSS that should be displayed if width is equal to or less than 800px goes here */
     main {
         height: 150vh;

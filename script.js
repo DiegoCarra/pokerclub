@@ -204,7 +204,7 @@ function makeid(length) {
 
 var scroll_limit = 0;
 
-if (window.innerWidth > 800) {
+if (window.innerWidth > 1000) {
     scroll_limit = 250;
 } 
 
